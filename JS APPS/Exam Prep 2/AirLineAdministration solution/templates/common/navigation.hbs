@@ -1,0 +1,14 @@
+{{#if isAuth}}
+<nav>
+    <div class="left-container">
+        <ul>
+            <li><a href="#/home">Home</a></li>
+            <li><a href="#/flights/mine">Flights</a></li>
+        </ul>
+    </div>
+    <div class="right-container">
+        <span>Welcome, {{username}}</span>
+        <a href="#/logout" class="log-out">Logout</a>
+    </div>
+</nav>
+{{/if}}
