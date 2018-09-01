@@ -1,0 +1,12 @@
+{{> navigation}}
+<div id="meme-feed">
+    <h1>Meme Feed</h1>
+    <div id="memes">
+        {{#each memes}}
+            {{>meme}}
+        {{else}}
+            <p class="no-memes">No memes in database.</p>
+        {{/each}}
+    </div>
+</div>
+{{> footer}}

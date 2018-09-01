@@ -1,0 +1,27 @@
+{{> navigation}}
+<div class="meme-details">
+    <div class="my-meme-details">
+        <a href="#" id="meme-title">{{meme.title}}</a>
+        <img src="{{meme.imageUrl}}">
+        <div class="meme-props">
+            <h2>Description</h2>
+            <p class="meme-description">
+                {{meme.description}}
+            </p>
+        </div>
+
+
+        <div class="meme-details-buttons">
+            <a class="meme-details-button" href="#/user/profile/{{meme._acl.creator}}">Created by {{meme.creator}}</a>
+            {{#if isCreator}}
+                <a href="#/meme/edit/{{meme._id}}" class="meme-details-button">Edit</a>
+                <a href="#/meme/delete/{{meme._id}}" class="meme-details-button">Delete</a>
+            {{/if}}
+
+        </div>
+
+
+    </div>
+</div>
+
+{{> footer}}
